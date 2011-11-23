@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+        name="Test\ProductDescription"
+        table="product_description">
+
+        <id name="product" association-key="true" />
+        
+        <id name="locale" type="string" />
+
+        <many-to-one
+            field="product"
+            target-entity="Test\Product"
+            inversed-by="descriptions">
+            <join-column
+                name="product_id"
+                referenced-column-name="product_id"/>
+        </many-to-one>
+        
+        <field name="description" type="string" />
+
+    </entity>
+</doctrine-mapping>

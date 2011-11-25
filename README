@@ -1,8 +1,14 @@
-This mini project shows the possible problem that Doctrine has with XML driver when a composite key is used as a foreign key.
+This mini project shows the possible problem that Doctrine has with the XML driver when a 
+foreign key is used as part of a composite primary key.
 
 Setup:
 
-1. First, setup Doctrine pathes in $doctrineCommonPath, $doctrineDbalPath and $doctrineOrmPath
-2. Choose which driver to use: Annotation or XML, configure in $driver
+1. Setup Doctrine pathes in $doctrineCommonPath, $doctrineDbalPath and $doctrineOrmPath (lines 7-9 index.php)
+2. Choose which driver to use: Annotation or XML, configure in $driver (lines 48, 49 index.php)
 
-The program will show when you choose XML as driver.
+The database is in database.sqlite, so there is no database setup to be done.
+
+The problem will show up when you choose XML as driver and view index.php.
+You will see that the database data isn't represented in the graph with the XML driver,
+while it shows up perfectly with the Annotation driver.
+

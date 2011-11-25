@@ -1,6 +1,9 @@
 <?php
 
-/* Replace these with the correct paths. */
+/**
+ * VIEW README FILE
+ * Replace these with the correct paths. 
+ */
 $doctrineCommonPath = '/home/justin/fir.com/www/rialto/vendor/doctrine-common/lib';
 $doctrineDbalPath = '/home/justin/fir.com/www/rialto/vendor/doctrine-dbal/lib';
 $doctrineOrmPath = '/home/justin/fir.com/www/rialto/vendor/doctrine/lib';
@@ -36,6 +39,12 @@ $cache = new \Doctrine\Common\Cache\ArrayCache;
 $config = new Configuration();
 $config->setMetadataCacheImpl($cache);
 $reader = new AnnotationReader();
+
+/**
+ * VIEW README FILE
+ * comment/uncomment the below two lines to switch 
+ * between XML and Annotation drivers
+ */
 $driver = new AnnotationDriver($reader, 'Test');
 //$driver = new XmlDriver('Test');
 $config->setMetadataDriverImpl($driver);
